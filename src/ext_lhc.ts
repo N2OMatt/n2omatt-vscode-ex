@@ -5,17 +5,19 @@ import * as vscode from 'vscode';
 import { window, Selection, Disposable } from 'vscode';
 
 const { spawn } = require('child_process');
+const path      = require('path');
 
 
 export function lhc()
 {
-    const filename = window.activeTextEditor.document.fileName;
     const is_saved = !window.activeTextEditor.document.isUntitled;
 
-    // Not saved document
-    //   Nothing to do.
+    // Not saved document!
+    //   Nothing to do...
     if(!is_saved)
         return;
+
+    const filename = window.activeTextEditor.document.fileName;
 
     const cmd_lhc = spawn("lhc", [filename]);
 

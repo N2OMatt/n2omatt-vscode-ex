@@ -11,20 +11,27 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.comment_header",
-        "onCommand:extension.comment_block"
+        "onCommand:ext_comment.comment_header",
+        "onCommand:ext_comment.comment_block",
+        "onCommand:ext_lhc.lhc"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.comment_header",
+                "command": "ext_comment.comment_header",
                 "title"  : "comment_header"
             },
             {
-                "command": "extension.comment_block",
+                "command": "ext_comment.comment_block",
                 "title"  : "comment_block"
+            },
+
+            {
+                "command": "ext_lhc.lhc",
+                "title"  : "lhc"
             }
+
         ]
     },
     "scripts": {
