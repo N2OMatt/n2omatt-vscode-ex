@@ -1,0 +1,43 @@
+{
+    "name": "n2omatt-vscode-ex",
+    "displayName": "n2omatt_vscode_ex",
+    "description": "\"My extensions to vscode.\"",
+    "version": "0.0.1",
+    "publisher": "n2omatt",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.comment_header",
+        "onCommand:extension.comment_block"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.comment_header",
+                "title"  : "comment_header"
+            },
+            {
+                "command": "extension.comment_block",
+                "title"  : "comment_block"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
