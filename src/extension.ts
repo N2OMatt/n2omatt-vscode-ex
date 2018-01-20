@@ -23,10 +23,12 @@ function register_extension(
 
 export function activate(context: vscode.ExtensionContext)
 {
+    //--------------------------------------------------------------------------
     // Comment
     register_extension("ext_comment", "comment_header", comment_header, context);
     register_extension("ext_comment", "comment_block",  comment_block,  context);
 
+    //--------------------------------------------------------------------------
     // LHC
     register_extension("ext_lhc", "lhc",  lhc, context);
 }
