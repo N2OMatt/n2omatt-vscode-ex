@@ -15,12 +15,12 @@ import { lhc } from "./ext_lhc";
 //----------------------------------------------------------------------------//
 // Variables                                                                  //
 //----------------------------------------------------------------------------//
-let editor          = window.activeTextEditor;
-let selection_empty = editor.selection.isEmpty;
+let editor          = null;
+let selection_empty = null;
 
-let old_position  = editor.selection.active;
-let line_index    = editor.selection.active.line;
-let column_index  = editor.selection.active.character;
+let old_position  = null;
+let line_index    = null;
+let column_index  = null;
 
 let selected_text = "";
 let cmt_start     = "##";
