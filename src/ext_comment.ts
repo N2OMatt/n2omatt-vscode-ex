@@ -107,6 +107,10 @@ function setup()
     line_index    = editor.selection.active.line;
     column_index  = editor.selection.active.character;
 
+    selected_text = "";
+    cmt_start     = "";
+    cmt_end       = "";
+
     find_comment_type ();
     find_selected_text();
 }
