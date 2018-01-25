@@ -8,8 +8,6 @@ import * as vscode from 'vscode';
 import { window, Selection, Disposable } from 'vscode';
 // Node
 const path = require('path');
-// Project.
-import { lhc } from "./ext_lhc";
 
 
 //----------------------------------------------------------------------------//
