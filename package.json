@@ -13,25 +13,30 @@
     "activationEvents": [
         "onCommand:ext_comment.comment_header",
         "onCommand:ext_comment.comment_block",
-        "onCommand:ext_lhc.lhc"
+        "onCommand:ext_lhc.lhc",
+        "onCommand:ext_sort.sort"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
                 "command": "ext_comment.comment_header",
-                "title"  : "comment_header"
+                "title": "comment_header"
             },
             {
                 "command": "ext_comment.comment_block",
-                "title"  : "comment_block"
+                "title": "comment_block"
             },
 
             {
                 "command": "ext_lhc.lhc",
-                "title"  : "lhc"
-            }
+                "title": "lhc"
+            },
 
+            {
+                "command": "ext_sort.sort",
+                "title": "sort"
+            }
         ]
     },
     "scripts": {

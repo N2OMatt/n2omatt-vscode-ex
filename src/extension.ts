@@ -6,6 +6,8 @@ import { window, Selection, Disposable } from 'vscode';
 
 import { lhc }                           from "./ext_lhc";
 import { comment_block, comment_header } from "./ext_comment";
+import { sort }                          from "./ext_sort";
+
 
 function register_extension(
     namespace  : string,
@@ -31,6 +33,10 @@ export function activate(context: vscode.ExtensionContext)
     //--------------------------------------------------------------------------
     // LHC
     register_extension("ext_lhc", "lhc",  lhc, context);
+
+    //--------------------------------------------------------------------------
+    // Sort
+    register_extension("ext_sort", "sort", sort, context);
 }
 
 export function deactivate()
