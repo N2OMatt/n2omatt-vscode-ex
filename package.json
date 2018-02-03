@@ -27,12 +27,10 @@
                 "command": "ext_comment.comment_block",
                 "title": "comment_block"
             },
-
             {
                 "command": "ext_lhc.lhc",
                 "title": "lhc"
             },
-
             {
                 "command": "ext_sort.sort",
                 "title": "sort"
