@@ -1,0 +1,52 @@
+{
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 16,
+    "editor.tabSize": 4,
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": true,
+    "editor.autoIndent": true,
+    "editor.codeLens": false,
+    "editor.detectIndentation": true,
+    "editor.emptySelectionClipboard": false,
+    "editor.fontWeight": "normal",
+    "editor.multiCursorModifier": "alt",
+    "editor.rulers": [80, 120],
+    "editor.scrollBeyondLastLine": false,
+    "editor.trimAutoWhitespace": true,
+
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.labelFormat": "default",
+
+    "window.restoreWindows": "none",
+
+    "files.eol": "\n",
+    "files.hotExit": "off",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "explorer.openEditors.visible": 0,
+
+    "terminal.explorerKind": "integrated",
+    "terminal.external.linuxExec": "xterm",
+    "terminal.external.osxExec": "Terminal.app",
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.rightClickCopyPaste": false,
+
+    "terminal.integrated.shell.linux": "sh",
+    "terminal.integrated.shell.osx": "sh",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "cmake-tools-helper.cmake_download_path": "C:\\Users\\n2omatt\\.vscode\\extensions\\maddouri.cmake-tools-helper-0.1.1\\cmake_download",
+
+
+}
