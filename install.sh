@@ -1,27 +1,9 @@
 #!/usr/bin/env sh
 
-##------------------------------------------------------------------------------
-## Functions
-find_real_user_home()
-{
-    ## Restore it at the end of the function.
-    if [ $UID == 0 ]; then
-        USER=$(printenv SUDO_USER);
-        if [ -z "$USER" ]; then
-            echo "Installing as root user...";
-            export REAL_USER_HOME="$HOME";
-        else
-            echo "Installing with sudo...";
-            export REAL_USER_HOME=$(getent passwd "$USER" | cut -d: -f6);
-        fi;
-    else
-        echo "Installing as normal user...";
-        export REAL_USER_HOME="$HOME";
-    fi;
-
-    REAL_USER_HOME=$(realpath $REAL_USER_HOME);
-}
-find_real_user_home;
+##----------------------------------------------------------------------------##
+## Imports                                                                    ##
+##----------------------------------------------------------------------------##
+source /usr/local/src/acow_shellscript_utils.sh
 
 
 ##----------------------------------------------------------------------------##
@@ -30,6 +12,7 @@ find_real_user_home;
 NAME="n2omatt-vscode-ex";
 SETTINGS_DIR="./settings";
 
+REAL_USER_HOME=$(find_real_user_home);
 EXT_INSTALL_DIR="$REAL_USER_HOME/.vscode/extensions/";
 SETTINGS_INSTALL_DIR="$REAL_USER_HOME/.config/Code/User/";
 
@@ -45,6 +28,7 @@ set -e
 
 ##------------------------------------------------------------------------------
 ## Print info.
+center_text " [vscode-ex installer] ";
 echo "EXT_INSTALL_DIR      : $EXT_INSTALL_DIR";
 echo "SETTINGS_INSTALL_DIR : $SETTINGS_INSTALL_DIR";
 
@@ -62,3 +46,7 @@ cp -rv $SETTINGS_DIR/* "$SETTINGS_INSTALL_DIR";
 cd ../
 rm -rf "$EXT_INSTALL_DIR/$NAME"
 cp -r $NAME "$EXT_INSTALL_DIR";
+
+echo -e "\nInstalled...";
+center_text "";
+echo -e "\n";
