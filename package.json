@@ -15,7 +15,8 @@
         "onCommand:ext_comment.comment_block",
         "onCommand:ext_lhc.lhc",
         "onCommand:ext_sort.sort",
-        "onCommand:ext_function_break.function_break"
+        "onCommand:ext_function_break.function_break",
+        "onCommand:ext_namespace_create.namespace_create"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -39,7 +40,12 @@
             {
                 "command": "ext_function_break.function_break",
                 "title": "function_break"
+            },
+            {
+                "command": "ext_namespace_create.namespace_create",
+                "title": "namespace_create"
             }
+
         ]
     },
     "scripts": {
