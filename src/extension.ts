@@ -27,6 +27,7 @@ import { window, Selection, Disposable } from 'vscode';
 import { lhc }                           from "./ext_lhc";
 import { comment_block, comment_header } from "./ext_comment";
 import { sort }                          from "./ext_sort";
+import { function_break }                from "./ext_function_break";
 
 
 //----------------------------------------------------------------------------//
@@ -64,6 +65,10 @@ export function activate(context: vscode.ExtensionContext)
     //--------------------------------------------------------------------------
     // Sort
     register_extension("ext_sort", "sort", sort, context);
+
+    //--------------------------------------------------------------------------
+    // Function Break.
+    register_extension("ext_function_break", "function_break", function_break, context);
 }
 
 export function deactivate()
