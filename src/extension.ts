@@ -28,7 +28,7 @@ import { lhc }                           from "./ext_lhc";
 import { comment_block, comment_header } from "./ext_comment";
 import { sort }                          from "./ext_sort";
 import { function_break }                from "./ext_function_break";
-
+import { namespace_create }              from "./ext_namespace_create";
 
 //----------------------------------------------------------------------------//
 // Private Functions                                                          //
@@ -68,7 +68,21 @@ export function activate(context: vscode.ExtensionContext)
 
     //--------------------------------------------------------------------------
     // Function Break.
-    register_extension("ext_function_break", "function_break", function_break, context);
+    register_extension(
+        "ext_function_break",
+        "function_break",
+        function_break,
+        context
+    );
+
+    //--------------------------------------------------------------------------
+    // Namespace
+    register_extension(
+        "ext_namespace_create",
+        "namespace_create",
+        namespace_create,
+        context
+    );
 }
 
 export function deactivate()
