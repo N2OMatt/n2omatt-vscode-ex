@@ -39,7 +39,7 @@ mkdir -pv $SETTINGS_INSTALL_DIR;
 
 ##------------------------------------------------------------------------------
 ## Install Settings.
-cp -rv $SETTINGS_DIR/* "$SETTINGS_INSTALL_DIR";
+#cp -rv $SETTINGS_DIR/* "$SETTINGS_INSTALL_DIR";
 
 ##------------------------------------------------------------------------------
 ## Install Extensions.
